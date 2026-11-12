@@ -6,40 +6,41 @@
 <title>Nrupesh Kadukar Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Digital portfolio of Nrupesh Kadukar, first-year student at TAPMI Bengaluru.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Archivo:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: one continuous page of seven sections under a sticky bar. Deep navy hero and contact bands frame light content sections.
+/* Theme: charcoal and white with a single signal red, in the manner of a strategy-consulting brand.
+   Layout: one continuous page of seven sections under a sticky bar. Deep navy hero and contact bands frame light content sections.
    Palette: consulting navy, a single electric blue accent, cool neutrals.
    Type: Newsreader (serif display, used for headings only), IBM Plex Sans (body), IBM Plex Mono (labels). */
 :root{
-  --navy:#051C2C;
-  --navy-2:#0B2A40;
-  --bg:#F5F8FB;
+  --navy:#121212;
+  --navy-2:#1C1C1C;
+  --bg:#F4F4F4;
   --surface:#FFFFFF;
-  --ink:#0B1F33;
-  --muted:#4F6378;
-  --line:#D8E1EA;
-  --accent:#1F4FFF;
+  --ink:#141414;
+  --muted:#5B5B5B;
+  --line:#DCDCDC;
+  --accent:#CC0000;
   --accent-ink:#FFFFFF;
-  --cyan:#3DB8FF;
-  --on-navy:#F2F6FA;
-  --on-navy-muted:#A9BCCD;
-  --shadow:0 1px 2px rgba(5,28,44,.06),0 8px 24px rgba(5,28,44,.06);
-  --font-display:'Newsreader',Georgia,'Times New Roman',serif;
+  --cyan:#FF4B4B;
+  --on-navy:#F5F5F5;
+  --on-navy-muted:#B8B8B8;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.07);
+  --font-display:'Archivo','Helvetica Neue',Arial,sans-serif;
   --font-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --font-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#07131F;--surface:#0D1D2E;--ink:#E8EEF5;--muted:#9DB0C3;--line:#1F3349;
-  --accent:#5C85FF;--accent-ink:#06121D;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);color-scheme:dark}}
+  --bg:#0E0E0E;--surface:#1A1A1A;--ink:#F0F0F0;--muted:#A8A8A8;--line:#2E2E2E;
+  --accent:#FF4B4B;--accent-ink:#111111;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#07131F;--surface:#0D1D2E;--ink:#E8EEF5;--muted:#9DB0C3;--line:#1F3349;
-  --accent:#5C85FF;--accent-ink:#06121D;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);color-scheme:dark}
+  --bg:#0E0E0E;--surface:#1A1A1A;--ink:#F0F0F0;--muted:#A8A8A8;--line:#2E2E2E;
+  --accent:#FF4B4B;--accent-ink:#111111;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--font-body);-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.12;margin:0;text-wrap:balance}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.1;margin:0;text-wrap:balance}
 p{margin:0}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
@@ -72,14 +73,14 @@ a{color:inherit}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes pop{to{opacity:1}}
 .hero .wrap{padding-block:clamp(72px,12vw,150px) clamp(120px,16vw,210px)}
-.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:15ch;letter-spacing:-.015em;margin-top:28px}
-.hero h1 em{font-style:italic;color:var(--cyan)}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.9rem);max-width:17ch;letter-spacing:-.03em;margin-top:28px}
+.hero h1 em{font-style:normal;color:var(--cyan)}
 .hero .sub{margin-top:28px;max-width:46ch;font-size:clamp(1rem,1.6vw,1.2rem);color:var(--on-navy-muted)}
 .hero .sub strong{color:var(--on-navy);font-weight:500}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font:500 14px/1 var(--font-body);letter-spacing:.02em;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,border-color .2s}
-.btn.solid{background:var(--accent);color:#fff;border-color:var(--accent)}
-.btn.solid:hover{transform:translateY(-2px);background:#3A63FF}
+.btn.solid{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.solid:hover{transform:translateY(-2px);filter:brightness(.88)}
 .btn.ghost{color:var(--on-navy);border-color:rgba(255,255,255,.35)}
 .btn.ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
 .btn .ar{transition:transform .2s}
@@ -91,7 +92,7 @@ a{color:inherit}
 /* sections */
 section.page{padding-block:clamp(64px,9vw,120px)}
 .head{display:grid;gap:16px;margin-bottom:clamp(36px,5vw,64px);max-width:720px}
-.head h2{font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.01em}
+.head h2{font-size:clamp(1.9rem,4vw,2.9rem);letter-spacing:-.025em}
 .head p{color:var(--muted);max-width:56ch}
 .reveal{opacity:.35;transform:translateY(20px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -99,7 +100,7 @@ section.page{padding-block:clamp(64px,9vw,120px)}
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:start}
 .about .copy{display:grid;gap:20px;font-size:1.08rem}
-.about .copy p:first-child{font-family:var(--font-display);font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.4;font-weight:400}
+.about .copy p:first-child{font-family:var(--font-display);font-size:clamp(1.3rem,2.2vw,1.75rem);line-height:1.4;font-weight:500;letter-spacing:-.01em}
 .about .copy p:not(:first-child){color:var(--muted)}
 .facts{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:8px 24px}
 .facts div{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid var(--line)}
@@ -168,17 +169,17 @@ section.page{padding-block:clamp(64px,9vw,120px)}
 .dl:hover{color:var(--accent)}
 /* contact */
 .contact{background:var(--navy);color:var(--on-navy);position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;right:-8%;top:-30%;width:520px;height:520px;border-radius:50%;border:1px solid rgba(61,184,255,.25);box-shadow:0 0 0 60px rgba(61,184,255,.04),0 0 0 120px rgba(61,184,255,.03)}
+.contact::before{content:"";position:absolute;right:-8%;top:-30%;width:520px;height:520px;border-radius:50%;border:1px solid rgba(255,75,75,.3);box-shadow:0 0 0 60px rgba(255,75,75,.05),0 0 0 120px rgba(255,75,75,.04)}
 .contact .wrap{position:relative}
-.contact h2{font-size:clamp(2.2rem,5.6vw,4.2rem);max-width:16ch;letter-spacing:-.015em}
-.contact h2 em{font-style:italic;color:var(--cyan)}
+.contact h2{font-size:clamp(2.1rem,5vw,3.8rem);max-width:18ch;letter-spacing:-.03em}
+.contact h2 em{font-style:normal;color:var(--cyan)}
 .contact .lead{margin-top:20px;max-width:50ch;color:var(--on-navy-muted)}
 .mailbox{margin-top:40px;display:flex;flex-wrap:wrap;align-items:stretch;gap:12px}
 .mailbox .addr{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:16px 22px;border:1px solid rgba(255,255,255,.25);min-width:0;background:rgba(255,255,255,.04)}
 .mailbox .addr span{font:500 11px/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
 .mailbox .addr strong{font:500 clamp(1.05rem,2.6vw,1.5rem)/1.2 var(--font-body);user-select:all;overflow-wrap:anywhere}
 .copied{font:500 13px var(--font-mono);color:var(--cyan);align-self:center;min-height:1em}
-footer{background:#031420;color:var(--on-navy-muted);font-size:.85rem}
+footer{background:#0A0A0A;color:var(--on-navy-muted);font-size:.85rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-block:24px}
 
 @media (max-width:900px){
@@ -230,7 +231,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 <!-- WELCOME -->
 <section class="hero on-navy" id="welcome">
   <svg class="trend" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
-    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3DB8FF" stop-opacity=".22"/><stop offset="1" stop-color="#3DB8FF" stop-opacity="0"/></linearGradient></defs>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF4B4B" stop-opacity=".22"/><stop offset="1" stop-color="#FF4B4B" stop-opacity="0"/></linearGradient></defs>
     <path class="fill" d="M0 360 L120 330 L240 342 L360 280 L480 300 L600 220 L720 244 L840 160 L960 176 L1080 80 L1200 40 L1200 400 L0 400 Z"/>
     <path class="ln" d="M0 360 L120 330 L240 342 L360 280 L480 300 L600 220 L720 244 L840 160 L960 176 L1080 80 L1200 40" vector-effect="non-scaling-stroke"/>
   </svg>
@@ -312,17 +313,17 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
       <article class="group reveal">
         <h3>Communication</h3>
         <ul><li>Writing</li><li>Report drafting</li><li>Presentation</li><li>Structured argument</li></ul>
-        <p class="seen">Shown in: all three project reports.</p>
+        <p class="seen">Shown in: my project reports and presentation.</p>
       </article>
       <article class="group reveal">
         <h3>Analysis</h3>
         <ul><li>Research</li><li>Financial statement analysis</li><li>Ratio analysis</li><li>Market structure analysis</li><li>Critical thinking</li></ul>
-        <p class="seen">Shown in: Ratio Analysis and Forms of Market.</p>
+        <p class="seen">Shown in: my Accounts and Mathematics projects.</p>
       </article>
       <article class="group reveal">
         <h3>Working style</h3>
         <ul><li>Data visualisation</li><li>MS Excel and Word</li><li>Attention to detail</li><li>Time management</li><li>Collaboration</li></ul>
-        <p class="seen">Shown in: the charts in the Tata Motors project.</p>
+        <p class="seen">Shown in: the work featured under Projects.</p>
       </article>
     </div>
   </div>
@@ -334,30 +335,30 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
     <div class="head reveal"><span class="label">Projects</span><h2>Selected academic work.</h2><p>Open any project to read the full report. More will be added here as they are completed.</p></div>
     <div class="cards">
       <article class="card reveal">
+        <div class="thumb" aria-hidden="true"><svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><path class="g" d="M40 20V130M40 80H270"/><path class="a" d="M50 120C90 120 100 30 150 30S210 130 260 40"/><circle class="b" cx="150" cy="30" r="5"/></svg></div>
+        <div class="body">
+          <div class="tags"><span>Mathematics</span><span>Project</span></div>
+          <h3>Mathematics Project</h3>
+          <p>A mathematics project report. Open it to read the full work.</p>
+          <a class="go" href="https://docs.google.com/document/d/1KtlMjFacU2qmodk-cU2c5cdbnh0-i6b-/edit?usp=sharing&ouid=116340810682901775653&rtpof=true&sd=true" target="_blank" rel="noopener"><span>Read the project</span><span class="ar" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="card reveal">
         <div class="thumb" aria-hidden="true"><svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><path class="g" d="M0 40H300M0 80H300M0 120H300"/><rect class="c" x="40" y="80" width="30" height="50"/><rect class="c" x="90" y="60" width="30" height="70"/><rect class="b" x="140" y="42" width="30" height="88"/><rect class="c" x="190" y="68" width="30" height="62"/><rect class="b" x="240" y="30" width="30" height="100"/></svg></div>
         <div class="body">
-          <div class="tags"><span>Accounts</span><span>Class XII</span></div>
-          <h3>Financial Statements of Tata Motors</h3>
-          <p>A balance sheet as at 31 March 2026 with notes to accounts, supported by charts that show how the company's assets, liabilities and funding are composed.</p>
-          <a class="go" href="https://docs.google.com/document/d/1CJJO3gKESW9UGV3x59N_5H0Yiy9oGMwZ/edit?usp=sharing&ouid=116340810682901775653&rtpof=true&sd=true" target="_blank" rel="noopener"><span>Read the project</span><span class="ar" aria-hidden="true">&rarr;</span></a>
+          <div class="tags"><span>Accounts</span><span>Project</span></div>
+          <h3>Accounts Project</h3>
+          <p>An accounts project report. Open it to read the full work.</p>
+          <a class="go" href="https://docs.google.com/document/d/1QFvKbaT-cheG1cxOjKtqDZV64Rhgc3wS/edit?usp=sharing&ouid=116340810682901775653&rtpof=true&sd=true" target="_blank" rel="noopener"><span>Read the project</span><span class="ar" aria-hidden="true">&rarr;</span></a>
         </div>
       </article>
       <article class="card reveal">
-        <div class="thumb" aria-hidden="true"><svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><path class="g" d="M0 40H300M0 80H300M0 120H300"/><path class="a" d="M30 118L90 96L150 104L210 60L270 34"/><circle class="b" cx="30" cy="118" r="5"/><circle class="b" cx="90" cy="96" r="5"/><circle class="b" cx="150" cy="104" r="5"/><circle class="b" cx="210" cy="60" r="5"/><circle class="b" cx="270" cy="34" r="5"/></svg></div>
+        <div class="thumb" aria-hidden="true"><svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><rect class="c" x="50" y="26" width="200" height="98" rx="3"/><path class="a" d="M74 52H176M74 74H226M74 96H150"/><circle class="b" cx="226" cy="50" r="6"/></svg></div>
         <div class="body">
-          <div class="tags"><span>Accounts</span><span>Class XII</span></div>
-          <h3>Ratio Analysis</h3>
-          <p>The meaning, objectives, advantages and limitations of ratio analysis, with liquidity, solvency, activity and profitability ratios worked out for Bhogle Constructions Ltd. and shown in charts.</p>
-          <a class="go" href="https://docs.google.com/document/d/1CuV0EUNW7uLHLHprfYcLXUi80UxxKsSt/edit?usp=sharing&ouid=116340810682901775653&rtpof=true&sd=true" target="_blank" rel="noopener"><span>Read the project</span><span class="ar" aria-hidden="true">&rarr;</span></a>
-        </div>
-      </article>
-      <article class="card reveal">
-        <div class="thumb" aria-hidden="true"><svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice"><path class="g" d="M40 20V130H270"/><path class="a" d="M60 36C120 60 180 100 250 118"/><path class="a" d="M60 120C120 100 190 60 250 30"/><circle class="b" cx="155" cy="78" r="7"/><path class="g" d="M155 78V130M40 78H155" stroke-dasharray="4 4"/></svg></div>
-        <div class="body">
-          <div class="tags"><span>Economics</span><span>Market study</span></div>
-          <h3>Forms of Market: The Indian Smartphone Industry</h3>
-          <p>A comparison of perfect competition, monopoly, monopolistic competition and oligopoly, applied to the brands that compete for Indian smartphone buyers.</p>
-          <a class="go" href="https://docs.google.com/document/d/1R8nVIhDvim6HxKLG3JgGdmwUdjtidhQ3/edit?usp=sharing&ouid=116340810682901775653&rtpof=true&sd=true" target="_blank" rel="noopener"><span>Read the project</span><span class="ar" aria-hidden="true">&rarr;</span></a>
+          <div class="tags"><span>LLR</span><span>Presentation</span></div>
+          <h3>LLR Presentation</h3>
+          <p>A slide presentation on LLR. Open it to view the slides.</p>
+          <a class="go" href="https://docs.google.com/presentation/d/1cfWxRbCWKcq_zhIQgvTmVSIEa3x9zac6/edit?usp=sharing&ouid=116340810682901775653&rtpof=true&sd=true" target="_blank" rel="noopener"><span>View the presentation</span><span class="ar" aria-hidden="true">&rarr;</span></a>
         </div>
       </article>
     </div>
